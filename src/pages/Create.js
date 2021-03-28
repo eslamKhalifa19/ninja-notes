@@ -2,57 +2,40 @@ import React from "react";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
+import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
+import SendIcon from "@material-ui/icons/Send";
+import AcUnitOutlinedIcon from "@material-ui/icons/AcUnitOutlined";
+
 export default function Create() {
   return (
-    <div>
-      <Container>
-        <Typography
-          variant="h6"
-          color="textSecondary"
-          component="h2"
-          gutterBottom
-        >
-          Create a New Note
-        </Typography>
-        <Button
-          onClick={() => console.log("you clicked me")}
-          type="submit"
-          color="secondary"
-          variant="contained"
-        >
-          Submit
-        </Button>
-
-        <br />
-
-        <Button type="submit" color="secondary" variant="outlined">
-          Submit
-        </Button>
-        <Button type="submit" color="default">
-          Submit
-        </Button>
-
-        <ButtonGroup color="secondary" variant="contained" disableElevation>
-          <Button>One</Button>
-          <Button>Two</Button>
-          <Button>Three</Button>
-        </ButtonGroup>
-      </Container>
-
-      {/* <Typography
-        variant="h1" 
-        color="primary"
-        align="center"
+    <Container size="sm">
+      <Typography
+        variant="h6"
+        color="textSecondary"
+        component="h2"
+        gutterBottom
       >
         Create a New Note
       </Typography>
-      <Typography
-        noWrap
+      <Button
+        onClick={() => console.log("you clicked me")}
+        type="submit"
         color="secondary"
+        variant="contained"
+        // startIcon={<SendIcon />}
+        endIcon={<KeyboardArrowRightIcon />}
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque molestiae magnam voluptate reiciendis fuga totam facere officia, animi sint laboriosam dolorum voluptas cupiditate explicabo dolore veritatis recusandae rem inventore sunt.
-      </Typography> */}
-    </div>
+        Submit
+      </Button>
+
+      {/* icons */}
+      <br />
+      <AcUnitOutlinedIcon />
+      <AcUnitOutlinedIcon color="secondary" fontSize="large" />
+      <AcUnitOutlinedIcon color="secondary" fontSize="small" />
+      <AcUnitOutlinedIcon color="action" fontSize="small" />
+      <AcUnitOutlinedIcon color="error" fontSize="small" />
+      <AcUnitOutlinedIcon color="disabled" fontSize="small" />
+    </Container>
   );
 }
